@@ -1,0 +1,48 @@
+@import "../base/module";
+
+.menu-icon {
+  display: none;
+  @media (max-width: $mobile) {
+    display: block;
+    position: relative;
+    width: 1.875rem;
+    height: 1.125rem;
+    z-index: 5;
+
+    span,
+    &::before,
+    &::after {
+      content: "";
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: 0.125rem;
+      background-color: #fff;
+      transition: all 0.3s ease 0s;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - 0.0625rem);
+    }
+
+    .menu-open & {
+      span {
+        width: 0;
+      }
+
+      &::before {
+        top: calc(50% - 0.0625rem);
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - 0.0625rem);
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

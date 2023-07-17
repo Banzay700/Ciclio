@@ -1,0 +1,33 @@
+.menu {
+   &__list {
+      row-gap: 0.3125rem;
+      column-gap: 24px;
+      flex-wrap: wrap;
+      @include flexProperties(center);
+   }
+
+   &__item {
+   }
+
+   &__link {
+      display: inline-block;
+      position: relative;
+      @include fontProperties(700, 14, 16, 'Roboto');
+
+      &::after {
+         content: '';
+         position: absolute;
+         bottom: -1px;
+         left: 50%;
+         width: 0;
+         height: 0.125rem;
+         transition: all 0.3s;
+         background-color: color(accent);
+      }
+      &.active::after,
+      &:hover::after {
+         width: 100%;
+         left: 0;
+      }
+   }
+}

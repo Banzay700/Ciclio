@@ -1,0 +1,22 @@
+@import "../base/module";
+
+.category {
+  display: inline-block;
+  padding: 0.3125rem 0.625rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.15);
+  transition: all 0.3s;
+  @include fontProperties(700, 10, 12, "Roboto");
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
+}
+.title {
+  @include fontProperties(700, 36, 46);
+}
+.text {
+  color: color(primary, "darker");
+  @include fontProperties(400, 12, 20);
+}
