@@ -1,7 +1,12 @@
-$color-primary: #ff6b08;
+@import "functions";
 
-$fontFamily: "Lora";
-$fontSize: 0.75rem;
+$color-primary: #ff6b08;
+$color-secondary: #ffffff;
+$bg-primary: #f8f9fa;
+
+$font-primary: "Lora";
+$font-secondary: "Roboto", sans-serif;
+$fontSize: 0.875rem;
 $mainColor: $color-primary;
 
 $minWidth: 320;
